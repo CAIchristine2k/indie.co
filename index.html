@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>INDIE.CO — La télévision culturelle de nouvelle génération</title>
+<meta name="description" content="INDIE.CO — La première plateforme qui réunit l'exigence éditoriale d'une chaîne culturelle et la personnalisation d'un service de streaming." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+<div class="counter" aria-hidden="true">
+  <span id="counterCurrent">01</span>
+  <span class="counter__sep">/</span>
+  <span id="counterTotal">10</span>
+</div>
+
+<nav class="nav">
+  <a href="#s01" class="nav__logo">
+    <img src="assets/logo.png" alt="INDIE.CO" />
+    <span>INDIE.<b>CO</b><i>IP TV</i></span>
+  </a>
+  <div class="nav__dots" id="navDots"></div>
+</nav>
+
+<div class="hint" aria-hidden="true">↑ ↓ pour naviguer</div>
+
+<main class="deck">
+
+<!-- ============================================================
+   PAGE 1 — COUVERTURE
+============================================================ -->
+<section class="slide slide--cover" id="s01">
+  <div class="rothko-mosaic" aria-hidden="true"></div>
+  <div class="slide__inner slide__inner--center">
+    <div class="tv-set">
+      <div class="tv-frame">
+        <div class="tv-bezel">
+          <div class="tv-screen">
+            <div class="tv-glare" aria-hidden="true"></div>
+            <img src="assets/logo.png" alt="INDIE.CO" class="tv-logo" />
+            <div class="tv-brand">INDIE.<span>CO</span></div>
+            <div class="tv-sub">IP TV</div>
+          </div>
+        </div>
+        <div class="tv-chin">
+          <div class="tv-led" aria-hidden="true"></div>
+          <div class="tv-brandmark">INDIE.CO</div>
+          <div class="tv-grille" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="tv-neck" aria-hidden="true"></div>
+      <div class="tv-base" aria-hidden="true"></div>
+    </div>
+    <p class="cover-hook">
+      Et si la télévision s&rsquo;adaptait enfin à chaque spectateur&nbsp;?
+    </p>
+    <div class="cover-meta">
+      <div>Dossier de présentation &middot; 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   PAGE 2 — LE PROBLÈME
+============================================================ -->
+<section class="slide slide--light" id="s02">
+  <div class="slide__inner">
+    <div class="slide-head">
+      <span class="chapter">01 — Le problème</span>
+      <h2>Nous sommes dans<br /><em>l&rsquo;ère du zapping.</em></h2>
+      <p class="lead">L&rsquo;informatique appliquée à l&rsquo;image opère un basculement de civilisation aussi important que celui de la <strong>galaxie Gutenberg</strong>. La télévision traditionnelle n&rsquo;a pas su suivre ce mouvement.</p>
+    </div>
+
+    <div class="problem-stats">
+      <div class="problem-stat">
+        <div class="problem-stat__value">60<span>&nbsp;%</span></div>
+        <div class="problem-stat__label">des spectateurs regardent un second écran<br />en même temps que leur téléviseur</div>
+      </div>
+      <div class="problem-stat">
+        <div class="problem-stat__value">4/5</div>
+        <div class="problem-stat__label">des foyers européens sont équipés d&rsquo;un téléviseur<br />depuis les années 1960</div>
+      </div>
+      <div class="problem-stat">
+        <div class="problem-stat__value">∞</div>
+        <div class="problem-stat__label">Fin de la hiérarchie<br />entre les écrans</div>
+      </div>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 21h8M12 19v2" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h4>Une programmation subie</h4>
+        <p>La télévision traditionnelle impose sa grille&nbsp;: le téléspectateur regarde ce que d&rsquo;autres ont choisi pour lui, au moment fixé par d&rsquo;autres. <strong>Aucune adaptation</strong> à ses goûts, à ses horaires ni à ses centres d&rsquo;intérêt.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="6" r="2" fill="currentColor"/><circle cx="14" cy="12" r="2" fill="currentColor"/><circle cx="10" cy="18" r="2" fill="currentColor"/></svg>
+        </div>
+        <h4>La fin de l&rsquo;écran unique</h4>
+        <p>Le téléspectateur se confond désormais avec l&rsquo;internaute. Il navigue entre téléviseur, smartphone, tablette et console. <strong>La hiérarchie entre les écrans a disparu.</strong></p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l4 4-4 4M19 8l-4 4 4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h4>De la direction à la proposition</h4>
+        <p>La télévision perdra bientôt sa fonction de «&nbsp;direction des programmes&nbsp;» au profit de la <strong>proposition de contenus</strong>. Il faut réinventer l&rsquo;art de programmer.</p>
+      </div>
+    </div>
+
+    <blockquote class="problem-quote">
+      La condition expresse est de revenir aux <strong>réels contenus</strong>. C&rsquo;est là que se situe l&rsquo;ambition d&rsquo;INDIE.CO&nbsp;: <em>la Renaissance.</em>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============================================================
+   PAGE 3 — LA SOLUTION INDIE.CO
+============================================================ -->
+<section class="slide slide--dark" id="s03">
+  <div class="slide__inner">
+    <div class="slide-head">
+      <span class="chapter chapter--gold">02 — La solution</span>
+      <h2>INDIE.<span class="accent">CO</span><br /><em>La télévision culturelle mondiale.</em></h2>
+      <p class="lead">La première plateforme à réunir <strong>l&rsquo;exigence éditoriale d&rsquo;une chaîne culturelle</strong> et <strong>la personnalisation d&rsquo;un service de streaming</strong>. Deux modes de consommation, une même ambition.</p>
+    </div>
+
+    <div class="solution-pillars">
+      <div class="solution-pillar">
+        <div class="solution-pillar__icon">◆</div>
+        <div>Culturelle par essence</div>
+      </div>
+      <div class="solution-pillar">
+        <div class="solution-pillar__icon">◇</div>
+        <div>Personnalisée par conception</div>
+      </div>
+      <div class="solution-pillar">
+        <div class="solution-pillar__icon">◈</div>
+        <div>Mondiale par ambition</div>
+      </div>
+    </div>
+
+    <div class="duo">
+      <div class="duo-card">
+        <div class="duo-card__header">
+          <div class="duo-card__index">01</div>
+          <div class="duo-card__badge">La chaîne</div>
+        </div>
+        <div class="duo-card__brand">INDIE.CO</div>
+        <div class="duo-card__type">Programmation éditorialisée</div>
+        <p>Une <strong>véritable chaîne culturelle</strong>, avec une programmation éditorialisée et linéaire. Le spectateur se laisse porter par la ligne éditoriale.</p>
+        <ul class="duo-card__features">
+          <li>
+            <div class="duo-card__feat-title">Grille éditorialisée</div>
+            <div class="duo-card__feat-desc">Choix humains, cohérence culturelle, rythme narratif</div>
+          </li>
+          <li>
+            <div class="duo-card__feat-title">Diffusion linéaire</div>
+            <div class="duo-card__feat-desc">Direct et faux-direct, pour un flux continu</div>
+          </li>
+          <li>
+            <div class="duo-card__feat-title">Envergure internationale</div>
+            <div class="duo-card__feat-desc">Coproductions et rayonnement mondial</div>
+          </li>
+        </ul>
+        <div class="duo-mock">
+          <div class="duo-mock__live">● EN DIRECT</div>
+          <div class="duo-mock__title">INDIE.CO — Programmation culturelle</div>
+        </div>
+      </div>
+
+      <div class="duo-card duo-card--alt">
+        <div class="duo-card__header">
+          <div class="duo-card__index">02</div>
+          <div class="duo-card__badge duo-card__badge--alt">Ma télévision</div>
+        </div>
+        <div class="duo-card__brand">TV4U</div>
+        <div class="duo-card__type">Expérience personnalisée</div>
+        <p>Chaque utilisateur compose <strong>sa propre télévision</strong> à partir du catalogue. Une expérience qui apprend, s&rsquo;adapte et s&rsquo;ouvre à la communauté.</p>
+        <ul class="duo-card__features">
+          <li>
+            <div class="duo-card__feat-title">Sélections personnelles</div>
+            <div class="duo-card__feat-desc">Composer sa propre grille à partir du catalogue</div>
+          </li>
+          <li>
+            <div class="duo-card__feat-title">Programmes adaptés aux goûts</div>
+            <div class="duo-card__feat-desc">Sélections nourries par les profils et les usages</div>
+          </li>
+          <li>
+            <div class="duo-card__feat-title">Rattrapage et enregistrement</div>
+            <div class="duo-card__feat-desc">Replay illimité et enregistrement à la demande</div>
+          </li>
+          <li>
+            <div class="duo-card__feat-title">Recommandations</div>
+            <div class="duo-card__feat-desc">Découverte augmentée par l&rsquo;intelligence artificielle</div>
+          </li>
+          <li>
+            <div class="duo-card__feat-title">Fonctions sociales</div>
+            <div class="duo-card__feat-desc">Partage, échanges, forums et communauté</div>
+          </li>
+        </ul>
+        <div class="duo-mock duo-mock--alt">
+          <div class="duo-mock__for">Pour vous</div>
+          <div class="duo-mock__grid">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="pullquote pullquote--small">
+      Une chaîne pour <em>découvrir</em>. Une télévision personnelle pour <em>choisir</em>.
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============================================================
+   PAGE 4 — LA TECHNOLOGIE
+============================================================ -->
+<section class="slide slide--light" id="s04">
+  <div class="slide__inner">
+    <div class="slide-head">
+      <span class="chapter">03 — La technologie</span>
+      <h2>Une infrastructure<br /><em>média intelligente.</em></h2>
+      <p class="lead">Diffusion IPTV et OTT, accessible sur tous les écrans. L&rsquo;intelligence artificielle au service de la personnalisation.</p>
+    </div>
+
+    <div class="techno-layout">
+      <div class="pipeline">
+        <div class="pipeline__node">Catalogue de contenus</div>
+        <div class="pipeline__arrow">↓</div>
+        <div class="pipeline__node pipeline__node--main">
+          <span>Cloud et infrastructure INDIE.CO</span>
+          <small>FTP &middot; Fibre optique &middot; Très haut débit &middot; Serveurs</small>
+        </div>
+        <div class="pipeline__arrow">↓</div>
+        <div class="pipeline__node pipeline__node--ai">
+          <span>Intelligence artificielle et données</span>
+          <small>Profilage &middot; Recommandation &middot; Programmation automatisée</small>
+        </div>
+        <div class="pipeline__arrow">↓</div>
+        <div class="pipeline__node">Distribution IPTV et OTT</div>
+        <div class="pipeline__arrow">↓</div>
+        <div class="pipeline__fan">
+          <span>Téléviseur</span>
+          <span>Ordinateur</span>
+          <span>Smartphone</span>
+          <span>Tablette</span>
+        </div>
+      </div>
+
+      <div class="techno-side">
+        <div class="techno-block techno-block--highlight">
+          <div class="techno-block__label">Intelligence artificielle</div>
+          <h4>L&rsquo;IA au cœur de la personnalisation</h4>
+          <ul>
+            <li><strong>Recommandation</strong> — comprendre les préférences de chaque spectateur</li>
+            <li><strong>Programmation</strong> — construire une grille sur mesure</li>
+            <li><strong>Découverte</strong> — faire émerger les contenus pertinents</li>
+            <li><strong>Internationalisation</strong> — sous-titrage et traduction automatisés</li>
+          </ul>
+        </div>
+        <div class="techno-block">
+          <div class="techno-block__label">Expérience OTT</div>
+          <p>L&rsquo;utilisateur crée son profil, précise ses centres d&rsquo;intérêt, accède au catalogue et compose sa propre grille de diffusion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   PAGE 5 — LE CATALOGUE
+============================================================ -->
+<section class="slide slide--catalog" id="s05">
+  <div class="rothko-mosaic rothko-mosaic--muted" aria-hidden="true"></div>
+  <div class="slide__inner">
+    <div class="slide-head">
+      <span class="chapter chapter--gold">04 — Le catalogue</span>
+      <h2>Une télévision culturelle<br /><em>et un <span lang="en">soft power</span>.</em></h2>
+    </div>
+
+    <div class="catalog-flow">
+      <div class="catalog-flow__step">Plateforme mondiale</div>
+      <div class="catalog-flow__arrow">→</div>
+      <div class="catalog-flow__step">Profil et préférences</div>
+      <div class="catalog-flow__arrow">→</div>
+      <div class="catalog-flow__step">Personnalisation et recommandations</div>
+      <div class="catalog-flow__arrow">→</div>
+      <div class="catalog-flow__step">Chaîne ou sélection personnelle</div>
+      <div class="catalog-flow__arrow">→</div>
+      <div class="catalog-flow__step catalog-flow__step--last">Téléviseur &middot; Mobile &middot; Web</div>
+    </div>
+
+    <div class="themes-grid">
+      <div class="theme-tag">Littérature</div>
+      <div class="theme-tag">Art</div>
+      <div class="theme-tag">Cinéma</div>
+      <div class="theme-tag">Musique</div>
+      <div class="theme-tag">Bande dessinée</div>
+      <div class="theme-tag">Histoire</div>
+      <div class="theme-tag">Géographie</div>
+      <div class="theme-tag">Économie</div>
+      <div class="theme-tag">Société</div>
+      <div class="theme-tag">Psychanalyse</div>
+      <div class="theme-tag">Linguistique</div>
+      <div class="theme-tag">Ethnologie</div>
+      <div class="theme-tag">Éthologie</div>
+      <div class="theme-tag">Spiritualité et religions</div>
+      <div class="theme-tag">Médecine et son histoire</div>
+      <div class="theme-tag">Agriculture, biodynamie et vin</div>
+      <div class="theme-tag">Sport</div>
+    </div>
+
+    <div class="softpower-strip">
+      <div class="softpower-strip__label">Soft power</div>
+      <div class="softpower-strip__flow">
+        <span>France</span><span>→</span><span>Europe</span><span>→</span><span>Amériques</span><span>→</span><span>Asie</span><span>→</span><span>Monde</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   PAGE 6 — MODÈLE ÉCONOMIQUE
+============================================================ -->
+<section class="slide slide--business" id="s06">
+  <div class="slide__inner">
+    <div class="slide-head">
+      <span class="chapter">05 — Le modèle économique</span>
+      <h2>Publicité<br /><em>et abonnement.</em></h2>
+      <p class="lead">Un modèle hybride et simple&nbsp;: gratuit avec publicité, ou abonnement sans publicité.</p>
+    </div>
+
+    <div class="bm-duo">
+      <div class="bm-card">
+        <div class="bm-card__badge">Gratuit</div>
+        <div class="bm-card__title">Avec publicité</div>
+        <div class="bm-card__price">0&nbsp;€</div>
+        <ul class="bm-card__list">
+          <li>Accès au catalogue</li>
+          <li>Publicité ciblée et éthique</li>
+          <li>Recommandations personnalisées</li>
+        </ul>
+      </div>
+
+      <div class="bm-plus" aria-hidden="true">+</div>
+
+      <div class="bm-card bm-card--premium">
+        <div class="bm-card__badge">Premium</div>
+        <div class="bm-card__title">Sans publicité</div>
+        <div class="bm-card__price">15&nbsp;€<span>/mois</span></div>
+        <ul class="bm-card__list">
+          <li>Aucune publicité</li>
+          <li>Accès intégral au catalogue</li>
+          <li>Fonctions sociales avancées</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bm-streams">
+      <div class="bm-streams__label">Revenus complémentaires</div>
+      <ul class="bm-streams__list">
+        <li>Brand content</li>
+        <li>Parrainage</li>
+        <li>Partenariats</li>
+        <li>Produits dérivés</li>
+        <li>Vente en ligne</li>
+        <li>Vente d&rsquo;œuvres d&rsquo;art</li>
+        <li>Financement participatif</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   PAGE 7 — STRUCTURE ET DÉPLOIEMENT
+============================================================ -->
+<section class="slide slide--light" id="s07">
+  <div class="slide__inner">
+    <div class="slide-head">
+      <span class="chapter">06 — Structure et déploiement</span>
+      <h2>Pensé en France.<br /><em>Conçu pour le monde.</em></h2>
+    </div>
+
+    <div class="geo">
+      <svg class="geo__map" viewBox="0 0 1000 500" aria-hidden="true">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#e85d2f" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#e85d2f" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="glow-blue" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#3d9bff" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#3d9bff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <path d="M120,180 Q180,150 240,175 L280,220 L260,270 L220,290 L180,275 L140,250 Z" fill="rgba(10,26,58,0.08)"/>
+        <path d="M300,140 Q380,120 460,145 L480,190 L440,240 L400,235 L360,215 L320,185 Z" fill="rgba(10,26,58,0.08)"/>
+        <path d="M500,180 Q580,155 680,180 L720,240 L680,290 L620,295 L560,270 L510,220 Z" fill="rgba(10,26,58,0.08)"/>
+        <path d="M760,220 Q820,200 880,230 L890,290 L840,320 L790,300 L760,265 Z" fill="rgba(10,26,58,0.08)"/>
+
+        <circle cx="480" cy="180" r="70" fill="url(#glow-blue)"/>
+        <circle cx="260" cy="220" r="65" fill="url(#glow)"/>
+        <circle cx="700" cy="245" r="65" fill="url(#glow)"/>
+        <circle cx="820" cy="270" r="60" fill="url(#glow)"/>
+
+        <path d="M260,220 Q380,100 480,180" stroke="#e85d2f" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+        <path d="M480,180 Q590,120 700,245" stroke="#e85d2f" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+        <path d="M480,180 Q620,150 820,270" stroke="#e85d2f" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+
+        <circle cx="480" cy="180" r="8" fill="#0a1a3a"/>
+        <circle cx="480" cy="180" r="14" fill="none" stroke="#3d9bff" stroke-width="2"/>
+        <circle cx="260" cy="220" r="7" fill="#e85d2f"/>
+        <circle cx="700" cy="245" r="7" fill="#e85d2f"/>
+        <circle cx="820" cy="270" r="6" fill="#b8351a"/>
+      </svg>
+
+      <div class="geo__legend">
+        <div class="geo__pin geo__pin--main">
+          <div class="geo__num">01</div>
+          <div class="geo__label">Paris &middot; France</div>
+          <p>Centre initial &middot; Direction éditoriale &middot; Studios de création.</p>
+        </div>
+        <div class="geo__pin">
+          <div class="geo__num">02</div>
+          <div class="geo__label">Europe</div>
+          <p>Extension naturelle &middot; Coproductions et partenariats médias.</p>
+        </div>
+        <div class="geo__pin">
+          <div class="geo__num">03</div>
+          <div class="geo__label">Amériques</div>
+          <p>Pôle technique et logistique &middot; Distribution et partenaires médias.</p>
+        </div>
+        <div class="geo__pin">
+          <div class="geo__num">04</div>
+          <div class="geo__label">Asie</div>
+          <p>Localisation &middot; Sous-titrage &middot; Coproductions et expansion mondiale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   PAGE 8 — L'ÉCOSYSTÈME
+============================================================ -->
+<section class="slide slide--dark" id="s08">
+  <div class="slide__inner">
+    <div class="slide-head">
+      <span class="chapter chapter--gold">07 — L&rsquo;écosystème</span>
+      <h2>Les hommes<br /><em>et les femmes.</em></h2>
+      <p class="lead">INDIE.CO n&rsquo;est pas seulement une plateforme technologique&nbsp;: c&rsquo;est un écosystème de créateurs, d&rsquo;experts et de partenaires.</p>
+    </div>
+
+    <div class="ecosystem">
+      <div class="ecosystem__card">
+        <div class="ecosystem__title">Créateurs</div>
+        <ul><li>Réalisateurs</li><li>Producteurs</li><li>Artistes</li><li>Auteurs</li></ul>
+      </div>
+      <div class="ecosystem__card">
+        <div class="ecosystem__title">Experts</div>
+        <ul><li>Chercheurs</li><li>Scientifiques</li><li>Intellectuels</li><li>Journalistes</li></ul>
+      </div>
+      <div class="ecosystem__card">
+        <div class="ecosystem__title">Technologie</div>
+        <ul><li>Ingénieurs</li><li>Développeurs</li><li>IA et données</li></ul>
+      </div>
+      <div class="ecosystem__card">
+        <div class="ecosystem__title">Média</div>
+        <ul><li>Programmation</li><li>Production</li><li>Distribution</li></ul>
+      </div>
+      <div class="ecosystem__card">
+        <div class="ecosystem__title">Partenaires</div>
+        <ul><li>Institutions</li><li>Fondations</li><li>Marques</li><li>Universités</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   PAGE 9 — MODÈLE FINANCIER
+============================================================ -->
+<section class="slide slide--budget" id="s09">
+  <div class="slide__inner">
+    <div class="slide-head">
+      <span class="chapter">08 — Modèle financier</span>
+      <h2>Une montée en puissance<br /><em>progressive.</em></h2>
+    </div>
+
+    <div class="fin-hero">
+      <div class="fin-hero__card">
+        <div class="fin-hero__label">Budget initial &middot; Année&nbsp;1</div>
+        <div class="fin-hero__value"><span class="count-up" data-count="88.5" data-format="decimal">88,5</span><span>&nbsp;M€ HT</span></div>
+      </div>
+      <div class="fin-hero__card fin-hero__card--alt">
+        <div class="fin-hero__label">Besoins complémentaires estimés</div>
+        <div class="fin-hero__value">+ 20 à 30<span>&nbsp;M€</span></div>
+        <div class="fin-hero__hint">Logistique &middot; Transport &middot; Stockage &middot; Gestion opérationnelle</div>
+      </div>
+      <div class="fin-hero__card fin-hero__card--time">
+        <div class="fin-hero__label">Montée en charge</div>
+        <div class="fin-hero__value">3 à 3,5<span>&nbsp;ans</span></div>
+        <div class="fin-hero__hint">Déploiement progressif des investissements</div>
+      </div>
+    </div>
+
+    <div class="fin-mid">
+      <div class="fin-pricing">
+        <div class="fin-pricing__label">Prix de référence</div>
+        <div class="fin-pricing__amount"><span class="count-up" data-count="15" data-format="int">15</span><span>&nbsp;€ / mois</span></div>
+        <div class="fin-pricing__year">soit 180&nbsp;€ par abonné et par an</div>
+        <div class="fin-pricing__tiers">
+          <div class="fin-pricing__tier">
+            <div class="fin-pricing__tier-name">Avec publicité</div>
+            <p>Tarif accessible</p>
+          </div>
+          <div class="fin-pricing__tier fin-pricing__tier--premium">
+            <div class="fin-pricing__tier-name">Sans publicité</div>
+            <p>Tarif supérieur</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fin-formula">
+        <div class="fin-formula__title">Estimation Année&nbsp;1</div>
+        <div class="fin-formula__row">
+          <div class="fin-formula__cell">
+            <div class="fin-formula__value"><span class="count-up" data-count="10000" data-format="intFr">10 000</span></div>
+            <div class="fin-formula__label">abonnés</div>
+          </div>
+          <div class="fin-formula__op">×</div>
+          <div class="fin-formula__cell">
+            <div class="fin-formula__value"><span class="count-up" data-count="180" data-format="int">180</span><span>&nbsp;€</span></div>
+            <div class="fin-formula__label">par an</div>
+          </div>
+          <div class="fin-formula__op">=</div>
+          <div class="fin-formula__cell fin-formula__cell--result">
+            <div class="fin-formula__value"><span class="count-up" data-count="1.8" data-format="decimal">1,8</span><span>&nbsp;M€</span></div>
+            <div class="fin-formula__label">de chiffre d&rsquo;affaires</div>
+          </div>
+        </div>
+        <div class="fin-formula__plus">
+          <span>+ Revenus publicitaires</span>
+          <span>+ Parrainage et brand content</span>
+          <span>+ Revenus complémentaires</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fin-charts">
+      <div class="fin-chart">
+        <div class="fin-chart__head">
+          <span class="chapter chapter--small">Investissement pluriannuel</span>
+          <h3>Année&nbsp;1 → Année&nbsp;4</h3>
+        </div>
+        <canvas id="chartRampUp"></canvas>
+      </div>
+      <div class="fin-chart">
+        <div class="fin-chart__head">
+          <span class="chapter chapter--small">Répartition des revenus</span>
+          <h3>Sources de monétisation</h3>
+        </div>
+        <canvas id="chartRevenue"></canvas>
+      </div>
+    </div>
+
+    <div class="fin-marketing">
+      <div class="fin-marketing__label">Budget marketing et acquisition</div>
+      <div class="fin-marketing__value"><span class="count-up" data-count="600" data-format="int">600</span><span>&nbsp;K€ / an</span></div>
+      <div class="fin-marketing__hint">Acquisition de nouveaux abonnés</div>
+    </div>
+
+    <div class="fin-empty" aria-hidden="true">
+      <span>Zone réservée — à compléter</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   PAGE 10 — L'ÉQUIPE
+============================================================ -->
+<section class="slide slide--outro" id="s10">
+  <div class="rothko-mosaic rothko-mosaic--muted" aria-hidden="true"></div>
+  <div class="slide__inner">
+    <div class="slide-head slide-head--center">
+      <span class="chapter chapter--gold">09 — L&rsquo;équipe</span>
+      <h2>Une équipe réunie<br /><em>autour d&rsquo;une vision.</em></h2>
+    </div>
+
+    <div class="team-cards">
+      <div class="team-card">
+        <div class="team-card__photo" data-initials="XL"></div>
+        <div class="team-card__name">Xavier Lelong</div>
+        <div class="team-card__role">Fondateur</div>
+        <p class="team-card__bio">Parcours à compléter — deux lignes maximum.</p>
+      </div>
+      <div class="team-card team-card--main">
+        <div class="team-card__photo" data-initials="MG"></div>
+        <div class="team-card__name">Marc Grimaldi</div>
+        <div class="team-card__role">Fonction à confirmer</div>
+        <p class="team-card__bio">Parcours à compléter — deux lignes maximum.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-card__photo" data-initials="LI"></div>
+        <div class="team-card__name">Lili</div>
+        <div class="team-card__role">Fonction à confirmer</div>
+        <p class="team-card__bio">Parcours à compléter — deux lignes maximum.</p>
+      </div>
+    </div>
+
+    <div class="outro-contact">
+      <a href="mailto:indieco34@gmail.com">indieco34@gmail.com</a>
+      <span>·</span>
+      <a href="tel:+33628137287">+33&nbsp;6&nbsp;28&nbsp;13&nbsp;72&nbsp;87</a>
+    </div>
+    <div class="outro-copy">© Xavier Lelong pour INDIE.CO — Tous droits réservés</div>
+  </div>
+</section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
