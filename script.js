@@ -17,6 +17,8 @@
     '.stat-strip',
     '.techno-layout',
     '.iptv-schema',
+    '.ai-illustration',
+    '.ott-illustration',
     '.geo',
     '.grid-tv',
     '.legal__timeline',
@@ -57,6 +59,8 @@
     '.forecast-kpis',
     '.budget__lines',
     '.pipeline',
+    '.pipeline-v2',
+    '.ai-features',
   ];
 
   singleTargets.forEach(sel => {
