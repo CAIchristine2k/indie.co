@@ -3,6 +3,21 @@
    Animations · reveals · count-ups · charts
    ============================================================ */
 
+/* ---------- Slide entrance animation (fallback si pas de animation-timeline) ---------- */
+(function () {
+  const supportsViewTimeline = CSS.supports && CSS.supports('animation-timeline: view()');
+  if (supportsViewTimeline) return;
+  const slides = document.querySelectorAll('.slide');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('slide-in');
+      }
+    });
+  }, { threshold: 0.15 });
+  slides.forEach((s) => io.observe(s));
+})();
+
 /* ---------- Reveal on scroll (fade-up + stagger) ---------- */
 (function () {
   // Targets pour reveal simple
@@ -62,6 +77,7 @@
     '.split-cards',
     '.problem-stats',
     '.problem-grid',
+    '.convictions',
     '.duo',
     '.timeline',
     '.levels',
@@ -147,10 +163,13 @@
 
 
 const PALETTE = {
-  blueDeep: '#0a1a3a',
-  blueRoyal: '#163a7a',
-  blueBrand: '#2b7fd9',
-  blueElectric: '#3d9bff',
+  blueKlein: '#0033a0',
+  blueKleinDark: '#001f66',
+  blueKleinSoft: '#4a6fd8',
+  blueDeep: '#0d1220',
+  blueRoyal: '#1a2440',
+  blueBrand: '#0033a0',
+  blueElectric: '#4a6fd8',
   orange: '#e85d2f',
   red: '#b8351a',
   yellow: '#f5a623',
