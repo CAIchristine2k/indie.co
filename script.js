@@ -19,6 +19,23 @@
     '.iptv-schema',
     '.ai-illustration',
     '.ott-illustration',
+    '.infra-strip',
+    '.journey',
+    '.structure-grid',
+    '.humans-duo',
+    '.budget-table',
+    '.fin-compensation',
+    '.fin-note',
+    '.cover-quote',
+    '.cover-problem',
+    '.cover-contact',
+    '.problematique',
+    '.merci-contact',
+    '.merci-body',
+    '.merci-title',
+    '.merci-signature',
+    '.revenues-duo',
+    '.bm-audience-note',
     '.geo',
     '.grid-tv',
     '.legal__timeline',
@@ -32,6 +49,8 @@
     '.fin-mid',
     '.fin-charts',
     '.fin-marketing',
+    '.prev-hero',
+    '.prev-sources',
     '.fin-empty',
     '.outro-contact',
     '.tv-frame',
@@ -52,9 +71,11 @@
     '.programs',
     '.shorts',
     '.apps',
+    '.prev-timeline',
     '.ecosystem',
     '.partners',
     '.team-cards',
+    '.team-editorial',
     '.forecast-grid',
     '.forecast-kpis',
     '.budget__lines',
@@ -146,19 +167,7 @@ const PALETTE = {
   const bar = document.getElementById('progressBar');
   const current = document.getElementById('counterCurrent');
   const totalEl = document.getElementById('counterTotal');
-  const dotsWrap = document.getElementById('navDots');
-
   totalEl.textContent = String(total).padStart(2, '0');
-
-  // Build dots
-  slides.forEach((s, i) => {
-    const b = document.createElement('button');
-    b.className = 'nav__dot';
-    b.setAttribute('aria-label', `Slide ${i + 1}`);
-    b.addEventListener('click', () => s.scrollIntoView({ behavior: 'smooth' }));
-    dotsWrap.appendChild(b);
-  });
-  const dots = Array.from(dotsWrap.children);
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -166,7 +175,6 @@ const PALETTE = {
         const i = slides.indexOf(e.target);
         current.textContent = String(i + 1).padStart(2, '0');
         bar.style.width = `${((i + 1) / total) * 100}%`;
-        dots.forEach((d, j) => d.classList.toggle('nav__dot--active', j === i));
       }
     });
   }, { threshold: 0.55 });
@@ -379,21 +387,80 @@ function gradient(ctx, chartArea, from, to) {
   });
 })();
 
+/* ---------- Prévisionnel CA 5 ans ---------- */
+(function () {
+  const el = document.getElementById('chartCA6');
+  if (!el) return;
+  new Chart(el, {
+    type: 'line',
+    data: {
+      labels: ['An 1', 'An 2', 'An 3', 'An 4', 'An 5'],
+      datasets: [{
+        label: 'Chiffre d\'affaires (M€)',
+        data: [0.834, 13.344, 95.91, 500.4, 1251],
+        borderColor: PALETTE.orange,
+        backgroundColor: (ctx) => {
+          const { chart } = ctx;
+          if (!chart.chartArea) return 'rgba(232,93,47,0.15)';
+          const g = chart.ctx.createLinearGradient(0, chart.chartArea.top, 0, chart.chartArea.bottom);
+          g.addColorStop(0, 'rgba(232,93,47,0.45)');
+          g.addColorStop(1, 'rgba(232,93,47,0)');
+          return g;
+        },
+        fill: true,
+        tension: 0.35,
+        borderWidth: 3,
+        pointBackgroundColor: PALETTE.crimson,
+        pointBorderColor: '#fff',
+        pointBorderWidth: 2,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (c) => {
+              const v = c.parsed.y;
+              return v < 1
+                ? `${(v * 1000).toFixed(0)} K€`
+                : `${v.toFixed(v < 10 ? 2 : 0)} M€`;
+            },
+          },
+        },
+      },
+      scales: {
+        x: { grid: { display: false } },
+        y: {
+          ticks: {
+            callback: (v) => v >= 1 ? v + ' M€' : (v * 1000) + ' K€',
+          },
+          grid: { color: 'rgba(10,8,16,0.05)' },
+        },
+      },
+    },
+  });
+})();
+
 (function () {
   const el = document.getElementById('chartRevenue');
   if (!el) return;
   new Chart(el, {
     type: 'doughnut',
     data: {
-      labels: ['Abonnements', 'Publicité', 'Brand Content', 'Partenariats', 'Complémentaires'],
+      labels: ['Abonnements', 'Œuvres d\'art', 'Publicité audiovisuelle', 'Publicité display', 'VOD / SVOD'],
       datasets: [{
-        data: [45, 25, 12, 10, 8],
+        data: [89.9, 7.2, 1.8, 0.6, 0.5],
         backgroundColor: [PALETTE.blueDeep, PALETTE.orange, PALETTE.yellow, PALETTE.blueBrand, PALETTE.crimson],
         borderWidth: 2, borderColor: '#fff', hoverOffset: 10,
       }],
     },
     options: {
-      responsive: true, maintainAspectRatio: false, cutout: '55%',
+      responsive: true, maintainAspectRatio: false, cutout: '58%',
       plugins: {
         legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 8, font: { size: 10 } } },
         tooltip: { callbacks: { label: (c) => `${c.label}: ${c.parsed}%` } },
