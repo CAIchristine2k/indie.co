@@ -6863,3 +6863,70 @@ a.merci-contact__value:hover {
   /* Team card photo plus petite */
   .team-card__photo--img img { border-radius: 50%; }
 }
+
+/* ============================================================
+   SLIDE 11 — Équipe : portrait unique en hero éditorial
+   ============================================================ */
+#s12 .slide-head { margin-bottom: 2.5rem; }
+#s12 .slide-head h2 { font-size: clamp(2rem, 3.2vw, 2.8rem); }
+#s12 .team-editorial { max-width: 780px; }
+#s12 .team-portrait {
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  padding: 2.75rem 3rem;
+  border-radius: 22px;
+  align-items: center;
+  position: relative;
+}
+#s12 .team-portrait::before {
+  content: "";
+  position: absolute;
+  top: 2.75rem;
+  right: 3rem;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue-brand), var(--blue-klein-dark));
+  border-radius: 2px;
+}
+#s12 .team-portrait__photo { width: 300px; max-width: 300px; }
+#s12 .team-portrait__body { gap: 0.5rem; }
+#s12 .team-portrait__index {
+  font-size: 0.72rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.32em;
+}
+#s12 .team-portrait__name {
+  font-size: clamp(2.1rem, 3vw, 2.6rem);
+  line-height: 1;
+}
+#s12 .team-portrait__role {
+  font-size: 0.75rem;
+  margin: 1rem 0 1.5rem;
+  letter-spacing: 0.26em;
+}
+#s12 .team-portrait__list {
+  padding-top: 1.35rem;
+  gap: 0.65rem;
+}
+#s12 .team-portrait__list li {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  padding-left: 1.3rem;
+}
+#s12 .team-portrait__list li::before {
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+}
+
+@media (max-width: 700px) {
+  #s12 .team-portrait {
+    grid-template-columns: 1fr;
+    padding: 1.75rem;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  #s12 .team-portrait::before { display: none; }
+  #s12 .team-portrait__photo { width: 200px; max-width: 200px; margin: 0 auto; }
+  #s12 .team-portrait__list { text-align: left; max-width: 380px; margin: 0 auto; }
+}
